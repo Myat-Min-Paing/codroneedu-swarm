@@ -5,12 +5,6 @@ from threading import Thread
 #Want to fly porcess
 def droneHandler(drone, portname):
     drone.pair(portname)
-    drone.takeoff()
-    drone.set_controller_LED(255, 255, 0, 255)
-    drone.set_drone_LED(255, 0, 0, 255)
-    drone.set_drone_LED(255, 255, 0, 255)
-    drone.set_drone_LED(0, 255, 0, 255)
-    drone.hover(2)
     drone.land()
     drone.close()
     
